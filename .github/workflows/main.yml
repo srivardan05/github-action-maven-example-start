@@ -42,7 +42,5 @@ jobs:
 
       - name: Build and Test with Maven
         run: mvn -B clean verify --file pom.xml
-      - name: Build and Test with Maven
-        run: mvn -B clean verify --file pom.xml
 
 
