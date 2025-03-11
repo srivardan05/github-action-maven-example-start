@@ -14,13 +14,14 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Set up JDK 14
+      - name: Set up JDK 17  # Use a supported version
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'
-          java-version: 14
-          cache: maven  # Enables dependency caching
+          distribution: 'temurin'  # Recommended OpenJDK distribution
+          java-version: 17
+          cache: maven  # Enables caching for Maven dependencies
 
       - name: Build and Test with Maven
         run: mvn -B clean verify --file pom.xml
+
 
